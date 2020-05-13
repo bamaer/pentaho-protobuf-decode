@@ -6,6 +6,7 @@ import java.util.Map;
 import org.pentaho.di.core.CheckResultInterface;
 import org.pentaho.di.core.Const;
 import org.pentaho.di.core.Counter;
+import org.pentaho.di.core.annotations.Step;
 import org.pentaho.di.core.database.DatabaseMeta;
 import org.pentaho.di.core.exception.KettleException;
 import org.pentaho.di.core.exception.KettleStepException;
@@ -31,6 +32,14 @@ import org.w3c.dom.Node;
  * 
  * @author Michael Spector
  */
+@Step(
+		id = "ProtobufDecode",
+		image = "logo.png",
+		i18nPackageName = "org.ckan",
+		name = "Protocol Buffers Decode",
+		description = "This plug-in allows accessing standalone fields from object encoded using Google Protocol Buffers",
+		categoryDescription = "Transform"
+)
 public class ProtobufDecodeMeta extends BaseStepMeta implements StepMetaInterface {
 
 	private String inputField;
